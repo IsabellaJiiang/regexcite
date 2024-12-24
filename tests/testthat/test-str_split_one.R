@@ -7,6 +7,6 @@ test_that("str_split_one() errors if input length > 1", {
 })
 
 test_that("str_split_one() exposes features of stringr::str_split()",{
-  expected_equal(str_split_one("a,b,c",",",n=2), c("a","b,c"))
-  expected_equal(str_split_one("a.b", stringr::fixed(".")), c("a","b"))
+  expect_equal(str_split_one("a,b,c",",",n=2), c("a","b,c"))
+  expect_equal(str_split_one("a.b", stringr::fixed(".")), c("a","b"))
 })
